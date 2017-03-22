@@ -539,7 +539,7 @@ $template_data = str_replace("[Current_Time_and_Date_css]",'<div id="current_tim
              //copy and past code START
             
              
-            //<script type="text/javascript" src="http://www.google.com/jsapi">   </script>     
+            //<script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js">   </script>     
             
             //<script type="text/javascript" src="js/gfeedfetcher.js">
               
