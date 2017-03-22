@@ -3,6 +3,7 @@
 
 // BY PHP NINJA JEFF CHILDERS
 
+// VERSION 2
 
 //     THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM AND SITEMAP MODULE--------->>>[SCRIPT BY JEFF CHILDERS ------>>>[ORIGINAL CODE] 
 // ###################################################     // ###################################################
