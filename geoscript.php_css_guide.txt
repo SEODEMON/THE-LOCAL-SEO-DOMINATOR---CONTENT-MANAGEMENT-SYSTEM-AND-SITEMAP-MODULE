@@ -1,0 +1,103 @@
+ <spin>{dog|Cat|Girl|Man|No|Boy|Peter|Mike}</spin>
+  [state] <br>
+ [city]   <br>
+ [longitude]  <br>
+ [latitude]  <br>
+  [state_abv.]   <br>
+  [postal_code]   <br>
+ [Current_Time_and_Date]  <br>
+ [zipcode]    <br>
+ [Metalongitude]   <br>
+ 
+ [Metalatitude] <br>
+ 
+  [citylink]  <br>
+  [statelink]  <br>
+  [Random_Article]  <br>
+  [News_Feed]  <br>
+  
+  [Map]
+  
+
+
+
+
+   STATE CSS VALUES
+<div id="state" class="state"> </div>  
+  
+  
+   CITY CSS VALUES 
+<div id="city" class="city">  </div>
+
+   THE CURRENT VISITOR'S TIME AND DATE DISPLAYED
+<div id="current_time_and_date" class="current_time_and_date">   </div>
+
+   NEWS FEED CSS VALUES
+<div id="News_Feed" class="News_Feed">' . $news_feed_data . '</div>
+
+
+
+DISPLAY GOODLE MAP CSS VALUES  
+
+GOOGLE MAP: Parameters must be changed in the script for some custom display settings 
+<div id="Map" class="Map">   </div>
+ 
+RANDOM ARTICLE CSS VALUES
+<div id="Random_Article" class="Random_Article">     </div> 
+
+
+LONGITUDE CSS VALUES
+<div id="longitude" class="longitude">    </div>
+
+LATITUDE CSS VALUES
+<div id="latitude" class="latitude">   </div>
+
+STATE ABREVIATION CSS VALUES
+<div id="state_abv" class="state_abv">    </div>
+
+ POSTAL CODE CSS VALUES
+<div id="postal_code" class="postal_code">
+
+METALOGITUDE CSS VALUES   (STRIPTS OUT SPECIAL CHARACTERS in Longitude DISPLAY)
+
+<div id="Metalongitude" class="Metalongitude">
+
+METALATITUDE  CSS VALUES  (STRIPTS OUT SPECIAL CHARACTERS in latitude DISPLAY)
+<div id="Metalatitude" class="Metalatitude">
+
+
+
+STATELINK CSS VALUES
+<div id="state_link" class="state_link">   </div>
+
+CITYLINK CSS VALUES
+<div id="city_link" class="city_link">   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
