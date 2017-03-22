@@ -6,13 +6,13 @@
 // VERSION 1
 
 
-//      THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM--------->>>[SCRIPT BY JEFF CHILDERS ------>>>[ORIGINAL CODE] 
+//      THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM AND SITEMAP MODULE--------->>>[SCRIPT BY JEFF CHILDERS ------>>>[ORIGINAL CODE] 
 // ###################################################     // ###################################################
 // ###################################################    // ###################################################
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 // ###################################################    // ###################################################
-//      THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM--------->>>[SCRIPT BY JEFF CHILDERS ------>>>[ORIGINAL CODE] 
+//      THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM AND SITEMAP MODULE--------->>>[SCRIPT BY JEFF CHILDERS ------>>>[ORIGINAL CODE] 
 
 
 //   SETTINGS
@@ -54,10 +54,6 @@ $zipcode = $_GET['zipcode'];
 
 
 // END GET TEMPLATE DATA
-
-
-
-
 
 
 
@@ -123,9 +119,6 @@ return spinin($s);
 $data_file = fopen("database.csv", "r")or die("Unable to open file!");
 while (!feof($data_file) ) {
 $line_of_text = fgetcsv($data_file);
-
-
-
 if( $zipcode==$line_of_text[3])
 $longitude=$line_of_text[4];
 if( $zipcode==$line_of_text[3])
@@ -139,8 +132,6 @@ $stateabrr=$line_of_text[1];
 
 }
     
-
-
 //   END MATCH UP COLUMN DATA
 
 
@@ -150,60 +141,302 @@ $stateabrr=$line_of_text[1];
 
 
 
+//      STRING REPLACE BASIC ACTIONS AND SHORTCODES--------->>>[SCRIPT BY JEFF CHILDERS ------>>>[ORIGINAL CODE] 
+// ###################################################     // ###################################################
+// ###################################################    // ###################################################
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// ###################################################    // ###################################################
+//      STRING REPLACE BASIC ACTIONS AND SHORTCODES--------->>>[SCRIPT BY JEFF CHILDERS ------>>>[ORIGINAL CODE] 
 
 
 
+   //STATE VARABLE
+// ###################################################
+
+//    STATE VARABLE-------->>>        [state]
+
+$state_data = str_replace("_"," ",$state);
+$template_data = str_replace("[state]",$state_data,$template_data);
+
+
+// END STATE VARABLE-------->>>       [state]
+
+
+   //STATE CSS VARABLE
+// ###################################################
 
 
 
-//    STATE VARABLE-------->>> [state]
-// ####################################
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// ####################################
+//   STATE CSS VARABLE-------->>>           [state_css]
+
+$template_data = str_replace("[state_css]",'<div id="state" class="state">' . $state_data . '</div>',$template_data);
 
 
-$state = str_replace("_"," ",$state);
-$template_data = str_replace("[state]",'<div id="state" class="state">' . $state . '</div>',$template_data);
+//   END STATE CSS VARABLE-------->>>      [state_css]
 
 
-
-
-//   END STATE VARABLE
-
-
-
-
-//     CITY VARABLE-------->>> [city]
-// ####################################
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// ####################################
-
-
-$city = str_replace("_"," ",$city);
-$template_data = str_replace("[city]",'<div id="city" class="city">' . $city . '</div>',$template_data);
-
-
-
-
-//   END CITY VARABLE
-
-
-
-
-
-// ZIPCODE VARABLE-------->>> [zipcode]
-// ####################################
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// STATE ABBREVIATION VARABLE
 // ####################################
 
+// STATE ABBREVIATION VARABLE-------->>>   [state_abv.]
+
+$template_data = str_replace("[state_abv.]",$stateabrr,$template_data);
+
+
+// END STATE ABBREVIATION VARABLE-------->>>   [state_abv.]
+
+
+// STATE CSS ABBREVIATION VARABLE
+// ####################################
+
+// STATE CSS ABBREVIATION VARABLE-------->>>      [state_abv_css]
+
+$template_data = str_replace("[state_abv_css]",'<div id="state_abv" class="state_abv">' .$stateabrr. '</div>',$template_data);
+
+
+// END STATE CSS ABBREVIATION VARABLE-------->>>   [state_abv_css]
+
+
+
+   //CITY VARABLE
+// ###################################################
+//     CITY VARABLE-------->>>    [city]
+
+$city_data = str_replace("_"," ",$city);
+$template_data = str_replace("[city]",$city_data,$template_data);
+
+
+//   END CITY VARABLE-------->>>  [city]
+
+
+
+   //CITY CSS VARABLE
+// ###################################################
+
+//     CITY CSS VARABLE-------->>>     [city_css]
+
+$template_data = str_replace("[city_css]",'<div id="city" class="city">' . $city_data . '</div>',$template_data);
+
+
+//    END CITY  CSS VARABLE-------->>>   [city_css]
+
+
+
+// ZIPCODE VARABLE
+// ####################################
+
+//  ZIPCODE VARABLE-------->>>       [zipcode]
 
 $template_data = str_replace("[zipcode]",$zipcode,$template_data);
 
 
-
-//   END ZIPCODE VARABLE
+//   END ZIPCODE VARABLE-------->>>  [zipcode]
 
  
+// ZIPCODE CSS VARABLE
+// ####################################
+
+// ZIPCODE CSS VARABLE-------->>>    [zipcode_css]
+
+$template_data = str_replace("[zipcode_css]",'<div id="zipcode" class="zipcode">' . $zipcode . '</div>',$template_data);
+
+
+// END ZIPCODE VARABLE-------->>>   [zipcode_css]
+
+
+// POSTAL CODE VARABLE
+// ####################################
+
+// POSTAL CODE VARABLE-------->>>       [postal_code]
+
+$template_data = str_replace("[postal_code]",$zipcode,$template_data); 
+
+
+// END POSTAL CODE VARABLE-------->>>   [postal_code]
+
+
+
+// POSTAL CODE CSS VARABLE
+// ####################################
+
+// POSTAL CODE CSS VARABLE-------->>>       [postal_code_css]
+
+$template_data = str_replace("[postal_code_css]",'<div id="postal_code" class="postal_code">'. $zipcode . '</div>',$template_data); 
+
+
+// END POSTAL CODE CSS VARABLE-------->>>   [postal_code_css]
+
+
+
+// LONGITUDE VARABLE
+// ####################################
+
+//LONGITUDE VARABLE-------->>> [longitude]
+
+$template_data = str_replace("[longitude]",$longitude,$template_data);
+
+
+//END LONGITUDE VARABLE-------->>> [longitude]
+
+
+
+// LONGITUDE CSS VARABLE
+// ####################################
+
+//LONGITUDE CSS VARABLE-------->>>     [longitude]
+
+$template_data = str_replace("[longitude_css]",'<div id="longitude" class="longitude">'.$longitude. '</div>',$template_data);
+
+
+//END LONGITUDE CSS VARABLE-------->>>  [longitude]
+
+
+
+// LATITUDE VARABLE
+// ####################################
+
+// LATITUDE VARABLE-------->>>     [latitude]
+
+$template_data = str_replace("[latitude]",$latitude,$template_data);
+
+// LATITUDE VARABLE-------->>>     [latitude]
+
+
+
+
+// LATITUDE CSS VARABLE
+// ####################################
+
+// LATITUDE CSS VARABLE-------->>>         [latitude_css]
+
+$template_data = str_replace("[latitude_css]",'<div id="latitude" class="latitude">'.$latitude. '</div>',$template_data);
+
+
+// END LATITUDE CSS VARABLE-------->>>     [latitude_css]
+
+
+
+
+// METALONGITUDE VARABLE
+// ####################################
+
+//METALONGITUDE VARABLE-------->>>     [Metalongitude]
+
+$Metalongitudearray = array("&#176;"," "," N", " W", " S", " E","N","W","S","E");
+$Metalongitude = str_replace($Metalongitudearray,"",$Metalongitude);
+$template_data = str_replace("[Metalongitude]",$Metalongitude,$template_data);
+
+
+//END METALONGITUDE VARABLE-------->>> [Metalongitude]
+
+
+// METALONGITUDE CSS VARABLE
+// ####################################
+
+//METALONGITUDE CSS VARABLE-------->>>     [Metalongitude_css]
+
+$Metalongitudearray = array("&#176;"," "," N", " W", " S", " E","N","W","S","E");
+$Metalongitude = str_replace($Metalongitudearray,"",$Metalongitude);
+$template_data = str_replace("[Metalongitude_css]", '<div id="Metalongitude" class="Metalongitude">' . $Metalongitude.  '</div>',$template_data);
+
+
+//END METALONGITUDE CSS VARABLE------->>>  [Metalongitude_css]
+
+
+// METALATITUDE VARABLE
+// ####################################
+
+// METALATITUDE VARABLE-------->>>     [Metalatitude]
+
+$Metalatitudearray = array("&#176;"," ", " N", " W", " S", " E","N","W","S","E");
+$Metalatitude = str_replace($Metalatitudearray,"",$Metalatitude);
+$template_data = str_replace("[Metalatitude]", $Metalatitude,$template_data);
+
+
+// END METALATITUDE VARABLE-------->>>     [Metalatitude]
+
+
+// METALATITUDE CSS VARABLE
+// ####################################
+
+// METALATITUDE CSS VARABLE-------->>>        [Metalatitude_css]
+
+$Metalatitudearray = array("&#176;"," ", " N", " W", " S", " E","N","W","S","E");
+$Metalatitude = str_replace($Metalatitudearray,"",$Metalatitude);
+$template_data = str_replace("[Metalatitude_css]", '<div id="Metalatitude" class="Metalatitude">' .$Metalatitude. '</div>',$template_data);
+
+// END METALATITUDE CSS VARABLE-------->>>     [Metalatitude_css]
+
+
+
+   //STATELINK  VARABLE
+// ###################################################
+
+//   STATELINK  VARABLE----------------->>>        [statelink]
+{
+$state_link = str_replace(" ","_",$state);
+$template_data = str_replace("[statelink]",$state_link,$template_data);
+
+//  END STATELINK  VARABLE----------------->>>        [statelink]
+
+
+
+
+   //STATELINK CSS VARABLE
+// ###################################################
+
+//   STATELINK CSS VARABLE----------------->>>        [statelink_css]
+
+$state_link = str_replace(" ","_",$state);
+$template_data = str_replace("[statelink_css]",'<div id="state_link" class="state_link">'. $state_link .'</div>',$template_data);
+
+//  END STATELINK CSS VARABLE----------------->>>        [statelink_css]
+
+
+
+
+   //CITYLINK  VARABLE
+// ###################################################
+
+//   CITYLINK  VARABLE----------------->>>        [citylink]
+
+$city_link = str_replace(" ","_",$city);
+$template_data = str_replace("[citylink]",$city_link,$template_data);
+
+//   END CITYLINK  VARABLE----------------->>>        [citylink]
+
+
+
+   //CITYLINK CSS VARABLE
+// ###################################################
+
+//   CITYLINK CSS VARABLE----------------->>>        [citylink_css]
+
+$city_link = str_replace(" ","_",$city);
+$template_data = str_replace("[citylink_css]",'<div id="city_link" class="city_link">'. $city_link .'</div>',$template_data);
+}
+//   END CITYLINK CSS VARABLE----------------->>>        [citylink_css]
+
+// ###################################################
+
+
+
+
+// END------->>>STRING REPLACE BASIC ACTIONS AND SHORTCODES--------->>>[SCRIPT BY JEFF CHILDERS ------>>>[ORIGINAL CODE] 
+// ###################################################     // ###################################################
+// ###################################################    // ###################################################
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+// ###################################################    // ###################################################
+//  END------->>>STRING REPLACE BASIC ACTIONS AND SHORTCODES--------->>>[SCRIPT BY JEFF CHILDERS ------>>>[ORIGINAL CODE] 
+
+
+ // THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM AND SITEMAP MODULE
+// BY PHP NINJA JEFF CHILDERS
+
+
+ //------------------------------------------------------------------------------------------------------------------------------------------
 
 //   EXPANDED OPTIONS AREA (WILL ADD MORE WHEN I CAN)------------>>>>>>>>>       ADDED MODULES:
 // ###################################################
@@ -215,7 +448,6 @@ $template_data = str_replace("[zipcode]",$zipcode,$template_data);
 
 // ###################################################---------->>>>>>>>>        GOOGLE MAPS MODULE NO API NEEDED
 
-// ###################################################---------->>>>>>>>>        RANDOM SPINTAX ARTICLE PULLED FROM DIRECTORY AND DISPLAYED
 
 
  //------------------------------------------------------------------------------------------------------------------------------------------
@@ -231,28 +463,39 @@ $template_data = str_replace("[zipcode]",$zipcode,$template_data);
 // ###################################################
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// ###################################################           print(CURRENT DATE AND TIME MODULE)----------->>>>>>>>>>>>> [Current_Time_and_Date]
+// ###################################################           print(CURRENT DATE AND TIME MODULE)----------->>>>>>>>>>>>>   [Current_Time_and_Date]
 
 
 date_default_timezone_set("America/New_York");
 $present_time_and_date = date("F j, Y, g:i a"); 
-$template_data = str_replace("[Current_Time_and_Date]",'<div id="current_time_and_date" class="current_time_and_date">' . $present_time_and_date . '</div>',$template_data);
+
+// print(CURRENT DATE AND TIME MODULE)
+// ###################################################
+
+// print(CURRENT DATE AND TIME MODULE)----------->>>>>>>>>>>>>         [Current_Time_and_Date]
+
+$template_data = str_replace("[Current_Time_and_Date]",$present_time_and_date,$template_data);
+
+// END print(CURRENT DATE AND TIME MODULE)----------->>>>>>>>>>>>>     [Current_Time_and_Date]
+
+// print(CURRENT DATE AND TIME MODULE) WITH CSS VALUES
+// ###################################################
+
+// print(CURRENT DATE AND TIME MODULE) WITH CSS VALUES----------->>>>>>>>>>>>>       [Current_Time_and_Date_css]
+
+$template_data = str_replace("[Current_Time_and_Date_css]",'<div id="current_time_and_date" class="current_time_and_date">' . $present_time_and_date . '</div>',$template_data);
    
+
+// END print(CURRENT DATE AND TIME MODULE) WITH CSS VALUES----------->>>>>>>>>>>>>   [Current_Time_and_Date_css]
+
+
 
 
 //   END  print(CURRENT DATE AND TIME MODULE)
 
 
 
-
-
-
-
-
-//     RELATED NEWS FEED MODULE----------->>>>>>  [News_Feed]
-
-
-
+//  RELATED NEWS FEED MODULE
 //#####   #############      #############                         RELATED NEWS FEED MODULE----------->>>>>>  [News_Feed]
 // ###################################################
 // ###################################################
@@ -278,10 +521,7 @@ $template_data = str_replace("[Current_Time_and_Date]",'<div id="current_time_an
 //   REMOVE THE  // SYMBOL BELOW --->> COPY AND PASTE THE CODE BELOW IN YOUR HTML HEAD SECTION AND DOWNLOAD  gfeedfetcher.js  FOR MORE INFORMATION ---->>   VISIT:  http://dynamicdrive.com/dynamicindex18/gajaxrssdisplayer.htm
 
      
-     
-     
-     
-       //<!-- NEWS Feed JavaScript Code For HTML <head> </head> Section -->    
+//<!-- NEWS Feed JavaScript Code For HTML <head> </head> Section -->    
      
           
              //<!-- NEWS Feed Start Code -->
@@ -327,19 +567,40 @@ socialfeed.addFeed("Google", "http://news.google.com/news?hl=en&gl=us&q=[KEYWORD
         </script> ');
 
 // SEE INSTRUCTION FOR CSS MAPPING   OR    VISIT:      http://dynamicdrive.com/dynamicindex18/gajaxrssdisplayer.htm
-$template_data = str_replace("[News_Feed]",'<div id="News_Feed" class="News_Feed">' . $news_feed_data . '</div>',$template_data);
 
+
+
+// NEWS FEED
+// ###################################################
+
+// NEWS FEED---------------------->>>>>>      [News_Feed]
+
+$template_data = str_replace("[News_Feed]",$news_feed_data,$template_data);
+
+// END NEWS FEED---------------------->>>>>>  [News_Feed]
+
+
+
+// NEWS FEED WITH CSS VALUES
+// ###################################################
+
+// NEWS FEED WITH CSS VALUES---------------------->>>>>>          [News_Feed_css]
+
+
+$template_data = str_replace("[News_Feed_css]",'<div id="News_Feed" class="News_Feed">' . $news_feed_data . '</div>',$template_data);
+
+
+// END NEWS FEED WITH CSS VALUES---------------------->>>>>>      [News_Feed_css]
 
 
 //FOR MORE INFORMATION ABOUT THE (gfeedfetcher) NEWS FEED MODULE  VISIT:  http://dynamicdrive.com/dynamicindex18/gajaxrssdisplayer.htm
-
-
 
 
 //   END RELATED NEWS FEED MODULE
 
 // THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM AND SITEMAP MODULE
 // BY PHP NINJA JEFF CHILDERS
+
 
 
 //       GOOGLE MAPS MODULE NO API NEEDED
@@ -357,10 +618,25 @@ $map_data =('
 <iframe width="225" height="485" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"src="https://maps.google.com/maps?q=Chesapeake+VA&amp;ie=UTF8&amp;&amp;output=embed"></iframe><br />
 ');
 
-//  GOOGLE MAPS MODULE NO API NEEDED ----------->>>>>>  [Map]
-$template_data = str_replace("[Map]",'<div id="Map" class="Map">' . $map_data . '</div>',$template_data);
+
+//  GOOGLE MAPS MODULE NO API NEEDED TAGS
+// ###################################################
+
 //  GOOGLE MAPS MODULE NO API NEEDED ----------->>>>>>  [Map]
 
+$template_data = str_replace("[Map]",$map_data,$template_data);
+
+// END GOOGLE MAPS MODULE NO API NEEDED ----------->>>>>>  [Map]
+
+
+//  GOOGLE MAPS MODULE NO API NEEDED WITH CSS VALUES ----------->>>>>>   [Map_css]
+
+$template_data = str_replace("[Map_css]",'<div id="Map" class="Map">' . $map_data . '</div>',$template_data);
+
+//END GOOGLE MAPS MODULE NO API NEEDED WITH CSS VALUES ----------->>>>>>  [Map_css]
+
+
+// ###################################################
 
 //  END GOOGLE MAPS MODULE
 
@@ -368,81 +644,16 @@ $template_data = str_replace("[Map]",'<div id="Map" class="Map">' . $map_data . 
 // THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM AND SITEMAP MODULE
 // BY PHP NINJA JEFF CHILDERS
 
-
-
-
-//  RANDOM SPINTAX ARTICLE PULLED FROM A DIRECTORY AND DISPLAYED ----------->>>>>>  [Random_Article]
-
-
-//  WITH THIS MODULE YOU CAN PULL A RANDOM SPINTAX ARTICLE OR A REGULAR ARTICLE FROM A DIRECTORY AND DISPLAY
-
-
-//  A NEW ARTICLE WILL SHOW ON EACH BROWSER REFRESH
-
-
-
- //#####   #############      #############                           RANDOM SPINTAX ARTICLE PULLED FROM A DIRECTORY AND DISPLAYED ----------->>>>>>  [Random_Article]
-// ###################################################
-// ###################################################
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// ###################################################
-//                                                                    RANDOM SPINTAX ARTICLE PULLED FROM A DIRECTORY AND DISPLAYED ----------->>>>>>  [Random_Article]
-
-
-// EXAMPLE SPINTAX: {Boy|Girl|Dog|Cat|Cow|Man|Lizard|Bug|Car|Hacker|Turtle}  ALSO, SPIN HTML, SENTENCES, IMAGES, VIDEOS ETC....
- 
-
-function super_spin($s){
-preg_match('#\{(.+?)\}#is',$s,$m);
-if(empty($m)) return $s;
-
-$t = $m[1];
-
-if(strpos($t,'{')!==false){
-    $t = substr($t, strrpos($t,'{') + 1);
-}
-
-$parts = explode("|", $t);
-$s = preg_replace("+\{".preg_quote($t)."\}+is",                    
-$parts[array_rand($parts)], $s, 1);
-
-return super_spin($s);
-  }
-   
-
-
-// SET YOUR ARTICLE DIRECTORY SOURCE HERE
-$articles_directory_path = glob("articles/*.txt");
-// SET YOUR ARTICLE DIRECTORY SOURCE HERE
-
-$files = array_rand($articles_directory_path);
-$f = fopen($articles_directory_path[$files], "r");
-while ( $line = fgets($f, 900000) ) {
-
-                                         
-//RANDOM SPINTAX ARTICLE PULLED FROM DIRECTORY AND DISPLAYED ----------->>>>>>  [Random_Article]
-$template_data = str_replace("[Random_Article]",'<div id="Random_Article" class="Random_Article">'. (super_spin($line))  . '</div>', $template_data);
-//RANDOM SPINTAX ARTICLE PULLED FROM DIRECTORY AND DISPLAYED ----------->>>>>>  [Random_Article]
-
-}
-
-// END RANDOM SPINTAX ARTICLE 
-
 // ###################################################---------->>>>>>>>>        CURRENT TIME AND DATE MODULE
 
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------>>>>>>>        NEWS FEED MODULE
 
 // ###################################################---------->>>>>>>>>        GOOGLE MAPS MODULE NO API NEEDED
 
-// ###################################################---------->>>>>>>>>        RANDOM SPINTAX ARTICLE PULLED FROM DIRECTORY AND DISPLAYED
 
 
 // THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM AND SITEMAP MODULE
 // BY PHP NINJA JEFF CHILDERS
-
-
-
 
 // END OFEXPANDED OPTIONS AREA                  // END OFEXPANDED OPTIONS AREA                // END OFEXPANDED OPTIONS AREA  
 //****************************                  //****************************               //****************************
@@ -450,44 +661,11 @@ $template_data = str_replace("[Random_Article]",'<div id="Random_Article" class=
 //****************************                  //****************************               //****************************
 //****************************                  //****************************               //****************************
 
-
-
-
 // THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM AND SITEMAP MODULE
 // BY PHP NINJA JEFF CHILDERS
 
 
-
-
-
-//      STRING REPLACE BASIC ACTIONS AND SHORTCODES--------->>>[SCRIPT BY JEFF CHILDERS ------>>>[ORIGINAL CODE] 
-// ###################################################     // ###################################################
-// ###################################################    // ###################################################
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-// ###################################################    // ###################################################
-//      STRING REPLACE BASIC ACTIONS AND SHORTCODES--------->>>[SCRIPT BY JEFF CHILDERS ------>>>[ORIGINAL CODE] 
-  
-$template_data = str_replace("[longitude]",'<div id="longitude" class="longitude">'.$longitude. '</div>',$template_data);
-$template_data = str_replace("[latitude]",'<div id="latitude" class="latitude">'.$latitude. '</div>',$template_data);
-$template_data = str_replace("[state_abv]",'<div id="state_abv" class="state_abv">' .$stateabrr. '</div>',$template_data);
-$template_data = str_replace("[postal_code]",'<div id="postal_code" class="postal_code">'. $zipcode . '</div>',$template_data); 
-$Metalongitudearray = array("&#176;"," "," N", " W", " S", " E","N","W","S","E");
-$Metalongitude = str_replace($Metalongitudearray,"",$Metalongitude);
-$template_data = str_replace("[Metalongitude]", '<div id="Metalongitude" class="Metalongitude">' . $Metalongitude.  '</div>',$template_data);
-$Metalatitudearray = array("&#176;"," ", " N", " W", " S", " E","N","W","S","E");
-$Metalatitude = str_replace($Metalatitudearray,"",$Metalatitude);
-$template_data = str_replace("[Metalatitude]", '<div id="Metalatitude" class="Metalatitude">' .$Metalatitude. '</div>',$template_data);
-{
-$city_link = str_replace(" ","_",$city);
-$template_data = str_replace("[citylink]",'<div id="city_link" class="city_link">'. $city_link .'</div>',$template_data);
-$state_link = str_replace(" ","_",$state);
-$template_data = str_replace("[statelink]",'<div id="state_link" class="state_link">'. $state_link .'</div>',$template_data);
-
-
-}
-
- echo (spin($template_data)); 
+echo (spin($template_data)); 
   
 ob_flush();
 flush();
