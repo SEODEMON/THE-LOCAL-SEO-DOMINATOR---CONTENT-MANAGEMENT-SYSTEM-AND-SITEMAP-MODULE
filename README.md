@@ -4,3 +4,5 @@ THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM AND SITEMAP MODULE
 ![alt tag](https://github.com/SEODEMON/THE-LOCAL-SEO-DOMINATOR---CONTENT-MANAGEMENT-SYSTEM-AND-SITEMAP-MODULE/blob/master/images/seo_dominator.jpg)
 
 https://github.com/SEODEMON/THE-LOCAL-SEO-DOMINATOR---CONTENT-MANAGEMENT-SYSTEM-AND-SITEMAP-MODULE/blob/master/INSTRUCTIONS.pdf
+
+https://drive.google.com/file/d/0B1TAfr3WfuEPdEl4ck9mMEplNlk/view?usp=sharing
