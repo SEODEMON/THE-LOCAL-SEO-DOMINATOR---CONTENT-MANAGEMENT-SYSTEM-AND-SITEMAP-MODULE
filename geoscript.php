@@ -3,6 +3,8 @@
 
 // BY PHP NINJA JEFF CHILDERS
 
+// VERSION 1
+
 
 //      THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM--------->>>[SCRIPT BY JEFF CHILDERS ------>>>[ORIGINAL CODE] 
 // ###################################################     // ###################################################
