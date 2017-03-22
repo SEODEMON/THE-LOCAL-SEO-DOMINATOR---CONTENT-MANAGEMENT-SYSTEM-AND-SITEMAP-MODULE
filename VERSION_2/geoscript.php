@@ -262,7 +262,7 @@ $template_data = str_replace("[zipcode_css]",'<div id="zipcode" class="zipcode">
 // POSTAL CODE VARABLE-------->>>       [postal_code]
 
 $template_data = str_replace("[postal_code]",$postalcodes,$template_data); 
-
+$template_data = str_replace("[postal_codes]",$postalcodes,$template_data); 
 
 // END POSTAL CODE VARABLE-------->>>   [postal_code]
 
