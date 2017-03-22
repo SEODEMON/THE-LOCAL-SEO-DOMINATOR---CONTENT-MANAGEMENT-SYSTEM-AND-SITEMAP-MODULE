@@ -4,13 +4,13 @@
 // BY PHP NINJA JEFF CHILDERS
 
 
-//      STRING REPLACE BASIC ACTIONS AND SHORTCODES--------->>>[SCRIPT BY JEFF CHILDERS ------>>>[ORIGINAL CODE] 
+//     THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM AND SITEMAP MODULE--------->>>[SCRIPT BY JEFF CHILDERS ------>>>[ORIGINAL CODE] 
 // ###################################################     // ###################################################
 // ###################################################    // ###################################################
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 // ###################################################    // ###################################################
-//      STRING REPLACE BASIC ACTIONS AND SHORTCODES--------->>>[SCRIPT BY JEFF CHILDERS ------>>>[ORIGINAL CODE] 
+//      THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM AND SITEMAP MODULE--------->>>[SCRIPT BY JEFF CHILDERS ------>>>[ORIGINAL CODE] 
 
 
 //   SETTINGS
