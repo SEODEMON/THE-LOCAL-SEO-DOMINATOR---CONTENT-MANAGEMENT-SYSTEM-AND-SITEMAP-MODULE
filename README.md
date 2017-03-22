@@ -20,3 +20,8 @@ https://drive.google.com/file/d/0B1TAfr3WfuEPdEl4ck9mMEplNlk/view?usp=sharing
 # VERSION 2
 https://github.com/SEODEMON/THE-LOCAL-SEO-DOMINATOR---CONTENT-MANAGEMENT-SYSTEM-AND-SITEMAP-MODULE/blob/master/VERSION_2/INSTRUCTIONS.pdf
 
+
+# SITEMAP MODULE SCREENSHOT
+
+![alt tag](https://github.com/SEODEMON/THE-LOCAL-SEO-DOMINATOR---CONTENT-MANAGEMENT-SYSTEM-AND-SITEMAP-MODULE/blob/master/Sitemap_Module/Version_1/SCREENSHOT.JPG)
+
