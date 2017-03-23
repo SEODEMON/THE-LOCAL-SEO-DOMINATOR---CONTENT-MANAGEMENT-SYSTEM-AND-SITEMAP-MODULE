@@ -117,22 +117,22 @@ return spinin($s);
 // #######################
 
 $data_file = fopen("V2Database.csv", "r")or die("Unable to open file!");
-$city=$_GET['city'];
+$city_data = str_replace("_"," ",$city);
 while (!feof($data_file) ) {
 $line_of_text = fgetcsv($data_file);
-if( $city==$line_of_text[2])
+if( $city_data==$line_of_text[2])
 $stateabrr=$line_of_text[3];
-if( $city==$line_of_text[2])
+if( $city_data==$line_of_text[2])
 $longitude=$line_of_text[4];
-if( $city==$line_of_text[2])
+if( $city_data==$line_of_text[2])
 $latitude=$line_of_text[5];
-if( $city==$line_of_text[2])
+if( $city_data==$line_of_text[2])
 $Metalongitude=$line_of_text[4];
-if( $city==$line_of_text[2])
+if( $city_data==$line_of_text[2])
 $Metalatitude=$line_of_text[5];
-if( $city==$line_of_text[2])
+if( $city_data==$line_of_text[2])
 $postalcodes=$line_of_text[6];
-if( $city==$line_of_text[2])
+if( $city_data==$line_of_text[2])
 $zipcode=$line_of_text[6]; 
 }
 $extractpostalcodes=(explode(';',$postalcodes,0));
@@ -215,7 +215,7 @@ $template_data = str_replace("[state_abv_css]",'<div id="state_abv" class="state
 // ###################################################
 //     CITY VARABLE-------->>>    [city]
 
-$city_data = str_replace("_"," ",$city);
+
 $template_data = str_replace("[city]",$city_data,$template_data);
 
 
