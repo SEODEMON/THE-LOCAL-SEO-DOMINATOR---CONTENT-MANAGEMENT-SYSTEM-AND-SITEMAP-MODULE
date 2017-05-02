@@ -683,75 +683,14 @@ $template_data = str_replace("[Map_css]",'<div id="Map" class="Map">' . $map_dat
 
 
 
-
+// EXAMPLE TAGS
 
 $tags_data = ('<ul class="tag_links">
  <br>
 {
-<li><a href="[current_url]">Local Roofers Near Me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofing Companies Near Me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofing Contractors Near Me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofing Company Near Me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roof Repair Near Me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roof Repairs Near Me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofer Near Me in [city], [state]</a></li>
-<li><a href="[current_url]">Local New Roof Replacement Near Me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Siding Replacement Near Me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofers Located Near Me in [city], [state]</a></li>
-|
-<li><a href="[current_url]">Local Roofing Companies Located Near Me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofing Contractors Located Near Me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofing Company Located Near Me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roof Repair Located Near Me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roof Repairs Located Near Me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofer Located Near Me in [city], [state]</a></li>
-<li><a href="[current_url]">Local New Roof Replacement Located Near Me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Siding Replacement Located Near Me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofers Located close by in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofing Companies Located close by in [city], [state]</a></li>
-|
-<li><a href="[current_url]">Local Roofing Contractors Located close by in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofing Company Located close by in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roof Repair Located close by in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roof Repairs Located close by in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofer Located close by in [city], [state]</a></li>
-<li><a href="[current_url]">Local New Roof Replacement Located close by  in [city], [state]</a></li>
-<li><a href="[current_url]">Local Siding Replacement Located close by in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofers Located near your location in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofing Companies Located near your location in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofing Contractors Located near your location in [city], [state]</a></li>
-|
-<li><a href="[current_url]">Local Roofing Company Located near your location in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roof Repair Located near your location in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roof Repairs Located near your location in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofer Located near your location in [city], [state]</a></li>
-<li><a href="[current_url]">Local New Roof Replacement Located near your location in [city], [state]</a></li>
-<li><a href="[current_url]">Local Siding Replacement Located near your location in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofers Located near my location in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofing Companies Located near my location in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofing Contractors Located near my location in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofing Company Located near my location in [city], [state]</a></li>
-|
-<li><a href="[current_url]">Local Roof Repair Located near my location in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roof Repairs Located near my location in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofer Located near my location in [city], [state]</a></li>
-<li><a href="[current_url]">Local New Roof Replacement Located near my location in [city], [state]</a></li>
-<li><a href="[current_url]">Local Siding Replacement Located near my location in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofers based near me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofing Companies based near me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofing Contractors based near me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofing Company based near me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roof Repair based near me in [city], [state]</a></li>
-|
-<li><a href="[current_url]">Local Roof Repairs based near me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofer based near me in [city], [state]</a></li>
-<li><a href="[current_url]">Local New Roof Replacement based near me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Siding Replacement based near me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofing Contractors Located Near Me in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofing Company Located near your location in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofer Located near your location in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofers Located close by in [city], [state]</a></li>
-<li><a href="[current_url]">Local Roofing Contractors Located near my location in [city], [state]</a></li>
+<li><a href="[current_url]">Local Contractor Near Me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Flooring Companies Near Me in [city], [state]</a></li>
+
 <li><a href="[current_url]">Local New Roof Replacement Located near your location in [city], [state]</a></li>
 }
 
