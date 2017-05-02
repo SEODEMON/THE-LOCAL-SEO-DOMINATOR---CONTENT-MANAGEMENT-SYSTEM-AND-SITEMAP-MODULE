@@ -107,16 +107,15 @@ return spinin($s);
 // END SPINTAX CODE
 
 
-//   END MATCH UP COLUMN DATA
-
-
 
  //   MATCH UP COLUMN DATA
 // #######################
 // XXXXXXXXXXXXXXXXXXXXXXX
 // #######################
 
-$data_file = fopen("V2Database.csv", "r")or die("Unable to open file!");
+
+
+$data_file = fopen("roofing.csv", "r")or die("Unable to open file!");
 $city_data = str_replace("_"," ",$city);
 while (!feof($data_file) ) {
 $line_of_text = fgetcsv($data_file);
@@ -140,11 +139,14 @@ foreach ($extractpostalcodes as $displayallpostalcodes){
 $postalcodes = str_replace(';',", ",$displayallpostalcodes); 
 }
 
-
 $extractzipcodes=(explode(';',"<span class=\"eachcode\"><ul><li>".$zipcode."</li></ul></span>",0));
 foreach ($extractzipcodes as $displayallzipcodes){ 	
 $zipcodelist = str_replace(';',"</li><li>",$displayallzipcodes); 
  }  
+
+
+
+//   END MATCH UP COLUMN DATA
 
 
 
@@ -160,6 +162,34 @@ $zipcodelist = str_replace(';',"</li><li>",$displayallzipcodes);
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX    // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 // ###################################################    // ###################################################
 //      STRING REPLACE BASIC ACTIONS AND SHORTCODES--------->>>[SCRIPT BY JEFF CHILDERS ------>>>[ORIGINAL CODE] 
+
+
+
+//START
+
+
+
+
+
+//USE THIS TO CREATE TAGS AND LINK ZIP CODES AND OTHER THINGS 
+
+
+
+
+   //GET CURRENT URL
+// ###################################################
+
+//    GET CURRENT URL-------->>>           [current_url]
+
+$current_full_url = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$template_data = str_replace("[current_url]",$current_full_url,$template_data);
+$current_host = (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]";
+$template_data = str_replace("[current_host]",$current_host,$template_data);
+
+// END GET CURRENT URL-------->>>          [current_url]
+
+
+
 
 
 
@@ -256,15 +286,27 @@ $template_data = str_replace("[zipcode_css]",'<div id="zipcode" class="zipcode">
 // END ZIPCODE VARABLE-------->>>   [zipcode_css]
 
 
+
 // POSTAL CODE VARABLE
 // ####################################
 
 // POSTAL CODE VARABLE-------->>>       [postal_code]
 
+//OR
+
+
+// POSTAL CODES VARABLE-------->>>       [postal_codes]
+
 $template_data = str_replace("[postal_code]",$postalcodes,$template_data); 
 $template_data = str_replace("[postal_codes]",$postalcodes,$template_data); 
 
+
 // END POSTAL CODE VARABLE-------->>>   [postal_code]
+
+//OR
+
+
+// END POSTAL CODES VARABLE-------->>>       [postal_codes]
 
 
 
@@ -277,6 +319,7 @@ $template_data = str_replace("[postal_code_css]",'<div id="postal_code" class="p
 
 
 // END POSTAL CODE CSS VARABLE-------->>>   [postal_code_css]
+
 
 
 
@@ -459,7 +502,7 @@ $template_data = str_replace("[citylink_css]",'<div id="city_link" class="city_l
 
 // ###################################################---------->>>>>>>>>        GOOGLE MAPS MODULE NO API NEEDED
 
-
+// ###################################################---------->>>>>>>>>        TAG BLOCK ADDED - KEYWORDS TO THE LINKED CURRENT PAGE URL
 
  //------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -539,9 +582,9 @@ $template_data = str_replace("[Current_Time_and_Date_css]",'<div id="current_tim
              //copy and past code START
             
              
-            //<script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js">   </script>     
+     //<script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js">   </script>     
             
-            //<script type="text/javascript" src="js/gfeedfetcher.js">
+            //<script type="text/javascript" src="js/gfeedfetcher.js"> 
               
               ///***********************************************
               //* gAjax RSS Feeds Displayer- (c) Dynamic Drive (www.dynamicdrive.com)
@@ -567,8 +610,8 @@ $template_data = str_replace("[Current_Time_and_Date_css]",'<div id="current_tim
 
 $news_feed_data=(' <script type="text/javascript">
 var socialfeed=new gfeedfetcher("newsfeed", "newsfeedclass", "_new")
-socialfeed.addFeed("Google", "http://news.google.com/news?hl=en&gl=us&q=[KEYWORD]&um=1&ie=UTF-8&output=rss") //Specify "label" plus URL to RSS feed
-          socialfeed.addFeed("Google", "http://news.google.com/news?hl=en&gl=us&q=[city]+[state]&um=1&ie=UTF-8&output=rss") //Specify "label" plus URL to RSS feed
+socialfeed.addFeed("Google", "http://news.google.com/news?hl=en&gl=us&q=Roofing&um=1&ie=UTF-8&output=rss") //Specify "label" plus URL to RSS feed
+          socialfeed.addFeed("Google", "http://news.google.com/news?hl=en&gl=us&q=[city_for_news_feed]+[state_for_news_feed]&um=1&ie=UTF-8&output=rss") //Specify "label" plus URL to RSS feed
           socialfeed.displayoptions("label datetime snippet") //show the specified additional fields
           socialfeed.setentrycontainer("div") //Display each entry as a DIV
           socialfeed.filterfeed(4, "label") //Show 6 entries, sort by label
@@ -583,8 +626,13 @@ socialfeed.addFeed("Google", "http://news.google.com/news?hl=en&gl=us&q=[KEYWORD
 // ###################################################
 
 // NEWS FEED---------------------->>>>>>      [News_Feed]
-
+$city_for_news_feed = str_replace("_","+",$city);
+$state_for_news_feed = str_replace("_","+",$state);
+$news_feed_data = str_replace("[city_for_news_feed]",$city_for_news_feed,$news_feed_data);
+$news_feed_data = str_replace("[state_for_news_feed]",$state_for_news_feed,$news_feed_data);
 $template_data = str_replace("[News_Feed]",$news_feed_data,$template_data);
+$template_data = str_replace("[city_for_news_feed]",$city_for_news_feed,$template_data);
+$template_data = str_replace("[state_for_news_feed]",$state_for_news_feed,$template_data);
 
 // END NEWS FEED---------------------->>>>>>  [News_Feed]
 
@@ -655,13 +703,96 @@ $template_data = str_replace("[Map_css]",'<div id="Map" class="Map">' . $map_dat
 // BY PHP NINJA JEFF CHILDERS
 
 
+
+
+
+$tags_data = ('<ul class="tag_links">
+ <br>
+{
+<li><a href="[current_url]">Local Roofers Near Me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofing Companies Near Me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofing Contractors Near Me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofing Company Near Me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roof Repair Near Me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roof Repairs Near Me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofer Near Me in [city], [state]</a></li>
+<li><a href="[current_url]">Local New Roof Replacement Near Me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Siding Replacement Near Me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofers Located Near Me in [city], [state]</a></li>
+|
+<li><a href="[current_url]">Local Roofing Companies Located Near Me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofing Contractors Located Near Me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofing Company Located Near Me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roof Repair Located Near Me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roof Repairs Located Near Me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofer Located Near Me in [city], [state]</a></li>
+<li><a href="[current_url]">Local New Roof Replacement Located Near Me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Siding Replacement Located Near Me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofers Located close by in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofing Companies Located close by in [city], [state]</a></li>
+|
+<li><a href="[current_url]">Local Roofing Contractors Located close by in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofing Company Located close by in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roof Repair Located close by in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roof Repairs Located close by in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofer Located close by in [city], [state]</a></li>
+<li><a href="[current_url]">Local New Roof Replacement Located close by  in [city], [state]</a></li>
+<li><a href="[current_url]">Local Siding Replacement Located close by in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofers Located near your location in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofing Companies Located near your location in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofing Contractors Located near your location in [city], [state]</a></li>
+|
+<li><a href="[current_url]">Local Roofing Company Located near your location in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roof Repair Located near your location in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roof Repairs Located near your location in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofer Located near your location in [city], [state]</a></li>
+<li><a href="[current_url]">Local New Roof Replacement Located near your location in [city], [state]</a></li>
+<li><a href="[current_url]">Local Siding Replacement Located near your location in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofers Located near my location in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofing Companies Located near my location in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofing Contractors Located near my location in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofing Company Located near my location in [city], [state]</a></li>
+|
+<li><a href="[current_url]">Local Roof Repair Located near my location in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roof Repairs Located near my location in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofer Located near my location in [city], [state]</a></li>
+<li><a href="[current_url]">Local New Roof Replacement Located near my location in [city], [state]</a></li>
+<li><a href="[current_url]">Local Siding Replacement Located near my location in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofers based near me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofing Companies based near me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofing Contractors based near me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofing Company based near me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roof Repair based near me in [city], [state]</a></li>
+|
+<li><a href="[current_url]">Local Roof Repairs based near me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofer based near me in [city], [state]</a></li>
+<li><a href="[current_url]">Local New Roof Replacement based near me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Siding Replacement based near me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofing Contractors Located Near Me in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofing Company Located near your location in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofer Located near your location in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofers Located close by in [city], [state]</a></li>
+<li><a href="[current_url]">Local Roofing Contractors Located near my location in [city], [state]</a></li>
+<li><a href="[current_url]">Local New Roof Replacement Located near your location in [city], [state]</a></li>
+}
+
+ 
+</ul> ');
+
+$tags_data = str_replace("[current_url]",$current_full_url,$tags_data);
+$tags_data = str_replace("[city]",$city_data,$tags_data);
+$tags_data = str_replace("[state]",$state_data,$tags_data);
+$template_data = str_replace("[tags]",$tags_data,$template_data);
+
+
+    
 // ###################################################---------->>>>>>>>>        CURRENT TIME AND DATE MODULE
 
 // XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX------------>>>>>>>        NEWS FEED MODULE
 
 // ###################################################---------->>>>>>>>>        GOOGLE MAPS MODULE NO API NEEDED
 
-
+// ###################################################---------->>>>>>>>>        TAG BLOCK ADDED - KEYWORDS TO THE LINKED CURRENT PAGE URL
 
 // THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM AND SITEMAP MODULE
 // BY PHP NINJA JEFF CHILDERS
