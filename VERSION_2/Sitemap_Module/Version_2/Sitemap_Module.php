@@ -112,6 +112,8 @@ rewriteCond %{REQUEST_FILENAME} !-f
 rewriteCond %{REQUEST_FILENAME} !-d
 rewriterule ^$newurl?$ $template_folder_full_path?state=$2&city=$1 [L]");
 $url_format_for_htaccess = ".htaccess";
+$htaccess_data = str_replace(' ?state=$2&city=$1 [L]', '?state=$2&city=$1 [L]', $htaccess_data);
+$htaccess_data = str_replace('  ?state=$2&city=$1 [L]', '?state=$2&city=$1 [L]', $htaccess_data);
 file_put_contents($url_format_for_htaccess,$htaccess_data .PHP_EOL, FILE_APPEND);
 ob_flush();
 flush();
