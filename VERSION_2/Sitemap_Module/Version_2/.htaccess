@@ -1,9 +1,0 @@
-Options +FollowSymLinks -Indexes
-RewriteEngine On
-RewriteBase /
-
-
-
-rewriteCond %{REQUEST_FILENAME} !-f
-rewriteCond %{REQUEST_FILENAME} !-d
-rewriterule ^music-video-([a-z_A-Z]+)-([a-z_A-Z]+)-online.html?$ templates/template_folder33/geoscript.php?state=$2&city=$1 [L]
