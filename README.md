@@ -1,7 +1,7 @@
 # THE-LOCAL-SEO-DOMINATOR---CONTENT-MANAGEMENT-SYSTEM-AND-SITEMAP-MODULE
 THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM AND SITEMAP MODULE
 
-![alt tag](https://github.com/SEODEMON/THE-LOCAL-SEO-DOMINATOR---CONTENT-MANAGEMENT-SYSTEM-AND-SITEMAP-MODULE/tree/master/scripts/VERSION_1/images/seo_dominator.jpg)
+![alt tag](https://github.com/SEODEMON/THE-LOCAL-SEO-DOMINATOR---CONTENT-MANAGEMENT-SYSTEM-AND-SITEMAP-MODULE/blob/master/scripts/VERSION_1/images/seo_dominator.jpg)
 
   # PHP 5 & Above – No Database Needed
   ## Version 1 and Version 2
