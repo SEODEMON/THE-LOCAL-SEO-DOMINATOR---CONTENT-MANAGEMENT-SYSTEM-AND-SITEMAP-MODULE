@@ -1,0 +1,8 @@
+Options +FollowSymLinks -Indexes
+RewriteEngine On
+RewriteBase /
+
+
+
+
+
