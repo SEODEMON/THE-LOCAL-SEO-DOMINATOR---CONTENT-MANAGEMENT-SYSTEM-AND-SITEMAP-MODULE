@@ -4,7 +4,7 @@ THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM AND SITEMAP MODULE
 ![alt tag](https://github.com/SEODEMON/THE-LOCAL-SEO-DOMINATOR---CONTENT-MANAGEMENT-SYSTEM-AND-SITEMAP-MODULE/blob/master/scripts/VERSION_1/images/seo_dominator.jpg)
 
   # PHP 5 & Above – No Database Needed
-  ## Version 1 and Version 2
+  ## Version 1 and Version 2 geoscript.php Main Script
 
 ### The Local SEO Dominator is a light-weight content management system for creating geo targeted local landing pages.  This is NOT a doorway page generator. This is a tool to help you create tons of unique pages. 
 
@@ -13,6 +13,8 @@ THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM AND SITEMAP MODULE
 # PLEASE READ THE INSTRUCTIONS HERE
 
 https://github.com/SEODEMON/THE-LOCAL-SEO-DOMINATOR---CONTENT-MANAGEMENT-SYSTEM-AND-SITEMAP-MODULE/blob/master/INSTRUCTIONS.pdf
+
+## geoscript.php is the main script for modrewrite to create pages. The other scripts are tools to create links for Mod_rewrite.
 
 # MENU SCREENSHOT
 ![alt tag](https://github.com/SEODEMON/THE-LOCAL-SEO-DOMINATOR---CONTENT-MANAGEMENT-SYSTEM-AND-SITEMAP-MODULE/blob/master/Menu_Screenshot.jpg)
