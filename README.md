@@ -18,7 +18,7 @@ https://github.com/SEODEMON/THE-LOCAL-SEO-DOMINATOR---CONTENT-MANAGEMENT-SYSTEM-
 ![alt tag](https://github.com/SEODEMON/THE-LOCAL-SEO-DOMINATOR---CONTENT-MANAGEMENT-SYSTEM-AND-SITEMAP-MODULE/blob/master/Menu_Screenshot.jpg)
 
 # VERSION 1
-Creates a page for each single zipcode location.
+Creates a page for each single zipcode location. Includes a database for the United States.
 
 # VERSION 2
 Creates a page for each city and displays all zipcodes in that city.  You will need to create your own csv database for your target location.
