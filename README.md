@@ -10,7 +10,7 @@ THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM AND SITEMAP MODULE
 
 ### With this script you can create tons of locally targeted HTML pages on the fly. All of the pages will supercharge your seo campaign if the template is made correctly. I urge you to take your time and build quality templates by good seo practices. Make your templates as unique as possible and with locally targeted geo data. This script allows anyone to build high ranking local seo landing pages with ease.  This is an out of the box local seo solution for HTML pages.
 
-## SPINTAX SUPPORT
+### SPINTAX SUPPORT
 
 ### Spin Everything! Text Content, HTML, Images, Videos etc...  
 ### This is done with the Spin Tags "<spin>{Cat|Dog|Cow}</spin>"
