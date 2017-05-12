@@ -14,7 +14,7 @@ THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM AND SITEMAP MODULE
 
 https://github.com/SEODEMON/THE-LOCAL-SEO-DOMINATOR---CONTENT-MANAGEMENT-SYSTEM-AND-SITEMAP-MODULE/blob/master/INSTRUCTIONS.pdf
 
-## geoscript.php is the main script for modrewrite to create pages. The other scripts are tools to create links for Mod_rewrite.
+## geoscript.php is the main script for Mod_Rewrite to create pages. The other scripts are tools to create links for Mod_Rewrite.
 
 # MENU SCREENSHOT
 ![alt tag](https://github.com/SEODEMON/THE-LOCAL-SEO-DOMINATOR---CONTENT-MANAGEMENT-SYSTEM-AND-SITEMAP-MODULE/blob/master/Menu_Screenshot.jpg)
