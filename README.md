@@ -13,7 +13,7 @@ THE LOCAL SEO DOMINATOR - CONTENT MANAGEMENT SYSTEM AND SITEMAP MODULE
 ### SPINTAX SUPPORT
 
 ### Spin Everything! Text Content, HTML, Images, Videos etc...  
-### This is done with the Spin Tags. Example: "\<spin>{Cat|Dog|Cow}\</spin>"
+### This is done with the Spin Tags. example: "\<spin>{Cat|Dog|Cow}\</spin>"
 
 # PLEASE READ THE INSTRUCTIONS HERE
 
