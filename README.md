@@ -34,6 +34,8 @@ https://github.com/SEODEMON/THE-LOCAL-SEO-DOMINATOR---CONTENT-MANAGEMENT-SYSTEM-
 
 ![alt tag](https://github.com/SEODEMON/THE-LOCAL-SEO-DOMINATOR---CONTENT-MANAGEMENT-SYSTEM-AND-SITEMAP-MODULE/blob/master/scripts/VERSION_1/Sitemap_Module/SCREENSHOT.JPG)
 
-# A WEBSITE THAT USES THIS SCRIPT BELOW:
+# SOME WEBSITES THAT USES THIS SCRIPT BELOW:
 
-http://www.aquashieldroofingcorp.com/local-roofers-near-me-in-Virginia_Beach-Virginia.html
+http://www.aquashieldroofingcorp.com/local-roofers-near-you-in-Virginia_Beach-Virginia.html
+
+http://www.757hamptonroads.com/roofing-contractor-near-you-in-Chesapeake-Virginia.html
