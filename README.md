@@ -36,6 +36,6 @@ https://github.com/SEODEMON/THE-LOCAL-SEO-DOMINATOR---CONTENT-MANAGEMENT-SYSTEM-
 
 # SOME WEBSITES THAT USES THIS SCRIPT BELOW:
 
-http://www.757hamptonroads.com/new-roof-replacement-services-near-Chesapeake-Virginia.html
+https://www.757hamptonroads.com/new-roof-replacement-services-near-Chesapeake-Virginia.html
 
 https://www.757hamptonroads.com/roofing-company-services-near-your-location-in-Chesapeake-Virginia.html
